@@ -1,29 +1,23 @@
-angular.module('carApp', [])
-  .controller('CarListController', function() {
-    var carList = this;
-    carList.cars = [
-      // {name:'merc', model:'s-class'},
-      // {name:'toyota', model:'vios'},
-      // {name:'merc2', model:'s-class'},
-      // {name:'toyota2', model:'vios'},
-      // {name:'merc3', model:'s-class'},
-      // {name:'toyota3', model:'vios'}
+angular.module('chatApp', [])
+  .controller('ChatController', function() {
+    var chatScope = this;
+    chatScope.messages = [
+      {sender:'David', msg:'Welcome!'}
     ]
 
-    carList.addCar = function() {
-      carList.cars.push({name:carList.carName, model:carList.carModel})
-      carList.carName = ''
-      carList.carModel = ''
-    };
-
-    carList.delete = function(index) {
-      carList.cars.splice(index, 1)
-      // console.log(index)
+    chatScope.sendMsg = function() {
+      chatScope.messages.push({sender:chatScope.sender, msg:chatScope.msg})
+      chatScope.sender = ''
+      chatScope.msg = ''
     }
 
-     carList.edit = function(index) {
-      carList.carName = carList.cars[index].name
-      carList.carModel = carList.cars[index].model
-      carList.cars.splice(index, 1)
+    chatScope.delete = function(index) {
+      chatScope.messages.splice(index, 1)
+    }
+
+     chatScope.edit = function(index) {
+      chatScope.sender = chatScope.messages[index].sender
+      chatScope.msg = chatScope.messages[index].msg
+      chatScope.messages.splice(index, 1)
     }
   })

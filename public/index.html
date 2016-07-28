@@ -12,21 +12,19 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="carApp">
+  <body ng-app="chatApp">
     <h2>Angular chat app</h2>
-    <div ng-controller="CarListController as carList">
+    <div ng-controller="ChatController as chatScope">
       <span>Welcome to the Angular chat app!</span>
       <ul class="unstyled">
-        <p ng-repeat="car in carList.cars">
-            <span>{{car.name}} {{car.model}} </span>
-          <!-- <button ng-click='carList.delete($index)'>delete</button>
-          <button ng-click='carList.edit($index)'>edit</button> -->
-
+        <p ng-repeat="message in chatScope.messages">
+            <span>{{message.sender}}: {{message.msg}} </span>
         </p>
       </ul>
 
-      <form ng-submit="carList.addCar()">
-        <input type="text" ng-model="carList.carName"  size="50" placeholder="">
+      <form ng-submit="chatScope.sendMsg()">
+        <input type="text" ng-model="chatScope.sender"  size="50" placeholder="">
+        <input type="text" ng-model="chatScope.msg"  size="50" placeholder="">
         <input class="btn-primary" type="submit" value="Send" />
       </form>
     </div>
