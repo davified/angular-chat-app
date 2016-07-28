@@ -1,5 +1,5 @@
-# Simple Chat App
+# Angular Chat App
 
-A starter kit for building a socket.io based chat app with your frontend framwork of choice.
+Built on a starter kit for building a socket.io-based chat app prepared by @jeremiahalex
 
-Comes with an example client written in jQuery.
+Client built on Angular 1

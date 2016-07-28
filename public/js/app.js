@@ -1,5 +1,3 @@
-console.clear()
-
 angular.module('carApp', [])
   .controller('CarListController', function() {
     var carList = this;
