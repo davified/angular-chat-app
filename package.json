@@ -5,21 +5,16 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeremiahalex/simple-chat-app.git"
+    "type": "git"
   },
   "engines": {
     "node": "5.9.0"
   },
   "author": "JeremiahAlex",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jeremiahalex/simple-chat-app/issues"
-  },
-  "homepage": "https://github.com/jeremiahalex/simple-chat-app#readme",
   "dependencies": {
     "express": "^4.14.0",
     "socket.io": "^1.4.8"

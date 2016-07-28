@@ -1,3 +1,7 @@
+body {
+  padding: 50px
+}
+
 #status{
   font-size: 0.3em;
 }
